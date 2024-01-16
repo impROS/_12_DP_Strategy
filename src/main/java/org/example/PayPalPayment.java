@@ -1,2 +1,14 @@
-package org.example;public class PayPalPayment {
+package org.example;
+
+public class PayPalPayment implements PaymentStrategy {
+    private String email;
+
+    public PayPalPayment(String email) {
+        this.email = email;
+    }
+
+    @Override
+    public void pay(int amount) {
+        System.out.println("Paid " + amount + " TL with PayPal account " + email);
+    }
 }

@@ -1,2 +1,5 @@
-package org.example;public class PaymentStrategy {
+package org.example;
+
+interface PaymentStrategy {
+    void pay(int amount);
 }
